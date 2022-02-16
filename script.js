@@ -26,7 +26,6 @@ async function onPlay() {
         while (!obstacle) {
             vx = getVxAvant();
             x += vx;
-            y += 1;
             balle.style.left = x + "px";
             balle.style.top = y + "px";
             stop = vx <= 0;
