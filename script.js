@@ -9,7 +9,7 @@ let p = 1; //puissance de la frappe de la balle
 let d = 0.5; // decelleration de la vitesse de la basse
 let c = 0.78; // coefficient de rebus
 
-let angle = 360;
+let angle = 90;
 let vx = 10; //vitesse deplacement horizontal de la balle
 let vy = 0; //vitesse deplacement vertical de la balle
 
@@ -18,6 +18,8 @@ balle.style.top = y + "px";
 balle.style.left = x + "px";
 
 async function onClick() {
+    console.log('cos', dTrig(Math.cos, angle))
+    console.log('sin', dTrig(Math.sin, angle))
     vx *= p;
     vy *= p;
     update();
@@ -57,14 +59,10 @@ async function setPosition() {
     update();
 }
 
+function dTrig(trigFunc, angle) {
+    return trigFunc(angle * Math.PI / 180);
+}
+
 async function sleep(msec) {
     return new Promise(resolve => setTimeout(resolve, msec));
-}
-
-function getVxAvant() {
-    return vx - (vx * (d / 100));
-}
-
-function getVxApres() {
-    return vx - (vx * ((d * c) / 100));
 }
