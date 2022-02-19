@@ -5,7 +5,7 @@ let r = 25; //rayon de la balle
 let x = 50; //position horizontal de la balle
 let y = 500; //position verticale de la balle
 let dt = 1000; //dure de deplacement de la balle en ms
-let p = 1; //puissance de la frappe de la balle
+let p = 2; //puissance de la frappe de la balle
 let d = 0.5; // decelleration de la vitesse de la basse
 let c = 0.78; // coefficient de rebus
 
